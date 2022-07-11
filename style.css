@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(210, 46%, 95%);
+}
+section{
+    display: grid;
+    grid-template-columns: minmax(200px,400px);
+    grid-template-rows: 40vh 220px 80px;
+    gap:20px;
+    background-color: white;
+    margin: 5%;
+    margin-top: 20%;
+    border-radius: 10px;
+    font-family:'Manrope', sans-serif;
+    color: hsl(214, 17%, 51%);
+    width: 90vw;
+}
+
+.img1{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    border-radius:10px 10px 0 0 ;
+}
+
+.container{
+
+    
+    border-radius: 10px;
+}
+.container>h1:first-child{
+    color: hsl(217, 19%, 35%);
+    font-size: 18px;
+    line-height: 1.5rem;
+}
+.container>p:nth-child(1){
+    font-size: 16px;
+    line-height:1.5rem;
+    margin-top: 2%;
+   
+}
+.container h1,.container p:nth-child(2){
+    margin: 4%;
+}
+.outside{
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.outside>img{
+    border-radius: 100%;
+    max-width: 55%;
+    justify-self: center;
+}
+.outside div:last-child , .inside>div{
+    position: relative;
+    justify-self: center;
+    background-color: hsla(215, 23%, 78%,0.5);
+    height: 33%;
+    border-radius: 100%;
+    padding: 18px;
+}
+.outside div>img , .inside>div>img {
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    width: 50%;
+}
+.outside div p {
+    font-weight: 200;
+    font-size: 12px;
+    opacity: 0.9;
+}
+.outside div h3{
+    font-size: 14px;
+    color: hsl(217, 19%, 35%);
+}
+
+.inside{
+    background-color: hsl(217, 19%, 35%);
+    display: grid;
+    grid-template-columns: 30% repeat(3,15%) 30%;
+    align-items: center;
+    justify-items: center;
+    padding-inline: 5%;
+    border-radius: 0 0 10px 10px;
+}
+.inside>p:nth-child(1){
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: hsl(214, 22%, 62%);
+    font-family:'Manrope', sans-serif;
+    font-weight: 700;
+}
+.inside>div{
+    background-color:rgba(255, 255, 255,0.8);
+   
+}
+
+.outside.active{ 
+    display: none;
+}
+
+.inside.active{
+    display:none;
+}
+.outside ,.inside{
+    height: 70px;
+}
+@media screen and (min-width:1024px) {
+    section{
+        display:flex;
+        box-shadow: 24px 62px 170px -37px rgba(0,0,0,0.46);
+    }
+    .img1{
+        width: 40%;
+        height: 100%;
+        border-radius:10px 0 0 10px;
+    }
+    .outside{
+        
+        display: flex;
+        justify-content:space-evenly;
+        margin: auto;
+        position: relative;
+        right: 10%;
+        bottom: 5%;
+    }
+    .outside>img{
+        width: 10%;
+    }
+    .outside >div{
+        position: relative;
+        right:12%;
+    }
+    .outside>div:last-child{
+        position:relative;
+        left:15%;
+    }
+    .outside>div>p:last-child{
+        margin: auto;
+        opacity: 0.9;
+        font-size: 12px;
+    }
+    .outside .vis{
+        visibility: visible;
+    }
+    .container{
+        position: relative;
+    }
+    .container>h1:first-child{
+        font-size: 25px;
+        line-height: 1.8rem;   
+     }
+     .container p:nth-child(2){
+        font-size: large;
+     }
+
+    .inside{
+        position:absolute;
+        right:-6%  ;
+        bottom:28%;
+        border-radius: 10px;
+        height: 45px;
+        width:20vw;
+        display: flex;
+        justify-content: space-around;
+        padding:10px;
+        font-size: 12px;
+        box-shadow: 24px 62px 170px -37px rgba(0,0,0,0.46);
+    }
+    .inside::after{
+        content: "";
+        position: absolute;
+        top:98%;
+        left: 46.5%;
+        border-width: 8px;
+        border-style: solid;
+        margin-left:-5px;
+        border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    }
+
+   .inside>div{
+    display: none;
+   }
+
+    }
+
+@media screen and (min-width:1440px) {
+    section{
+        height: 40vh;
+        width: 55vw;
+       position: relative;
+        top:50%;
+        left:20%;
+
+    }
+    .inside{
+        left: 20vw;
+        bottom:12vh;
+        width: 15vw;
+    }
+}
+@media screen and (min-width:2560px) {
+    .container>h1:first-child{
+        font-size: 45px;
+        line-height: 3rem;   
+     }
+     .container p:nth-child(2){
+        font-size: 30px;
+     }
+     .outside{
+        margin-top: 10%;
+     }
+     .outside>img{
+        width: 10%;
+    }
+    .outside>div>p:last-child {
+
+        font-size: 25px;
+        
+    }
+    .outside div h3{
+        font-size: 30px;
+    
+    }
+    .outside div:last-child {
+        padding: 30px;
+    }
+
+    .inside{
+        left: 71%;
+        bottom:33%;
+        width: 12vw;
+    height: 5vh;
+font-size:25px;    }
+
+.inside img{
+    width:10%;
+}
+}
